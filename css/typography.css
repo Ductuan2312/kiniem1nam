@@ -1,0 +1,117 @@
+/* ==========================================
+   II. TYPOGRAPHY & FONT SETUP
+   ========================================== */
+
+/* --- 1. KHAI BÁO FONT MATTERDI (HI-FASHION LIGATURE FONT) --- */
+@font-face {
+  font-family: "Matterdi";
+  src: url("../assets/fonts/Matterdi-Black.ttf") format("truetype"),
+       url("../assets/fonts/Matterdi/Matterdi/Matterdi%20Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Matterdi";
+  src: url("../assets/fonts/Matterdi-ExtraBold.ttf") format("truetype"),
+       url("../assets/fonts/Matterdi/Matterdi/Matterdi%20Extra%20Bold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Matterdi";
+  src: url("../assets/fonts/Matterdi-Bold.ttf") format("truetype"),
+       url("../assets/fonts/Matterdi/Matterdi/Matterdi%20Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Matterdi";
+  src: url("../assets/fonts/Matterdi-Regular.ttf") format("truetype"),
+       url("../assets/fonts/Matterdi/Matterdi/Matterdi%20Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- 2. KHAI BÁO FONT iCiel Finch (MẪU "TÌNH YÊU" NGHỆ THUẬT) --- */
+@font-face {
+  font-family: "iCiel Finch";
+  src: url("../assets/fonts/iCielFinch.otf") format("opentype"),
+       url("../assets/fonts/iCiel%20Finch/OTF/iCiel%20Finch.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "iCiel Finch";
+  src: url("../assets/fonts/iCielFinch-Bold.otf") format("opentype"),
+       url("../assets/fonts/iCiel%20Finch/OTF/iCiel%20Finch%20Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- 3. ÁP DỤNG FONT CHỮ TOÀN TRANG --- */
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, .heading-font {
+  font-family: var(--font-heading);
+}
+
+/* KÍCH HOẠT NÉT NGHỆ THUẬT & LIGATURE CHO PHÔNG NGHỆ THUẬT */
+.font-artistic,
+.hero-copy h1,
+.hero-copy h1 .pull-line,
+.hero-copy h1 .pull-word {
+  font-family: 'Matterdi', 'iCiel Finch', serif !important;
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures contextual !important;
+  font-feature-settings: "dlig" 1, "liga" 1, "calt" 1, "swsh" 1, "salt" 1, "ss01" 1, "ss02" 1, "ss03" 1 !important;
+  letter-spacing: normal !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* FONT iCiel Finch CHO CÂU TRÍCH DẪN NGHỆ THUẬT LÃNG MẠN */
+.font-finch,
+.hero-quote {
+  font-family: 'iCiel Finch', 'Matterdi', cursive, serif !important;
+  font-size: clamp(1.2rem, 2.3vw, 1.65rem) !important;
+  font-weight: 400;
+  line-height: 1.65 !important;
+  color: var(--cream) !important;
+  letter-spacing: 0.01em !important;
+  font-variant-ligatures: common-ligatures contextual swashes !important;
+  font-feature-settings: "liga" 1, "swsh" 1, "calt" 1 !important;
+  margin-top: 24px !important;
+  max-width: 520px !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* LỚP FONT RIÊNG BIỆT: font Mat (Matterdi) & font ici (iCiel Finch) */
+.font-mat {
+  font-family: 'Matterdi', 'iCiel Finch', serif !important;
+  font-weight: 700 !important;
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures contextual !important;
+  font-feature-settings: "dlig" 1, "liga" 1, "calt" 1, "swsh" 1, "salt" 1, "ss01" 1, "ss02" 1, "ss03" 1 !important;
+  letter-spacing: normal !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-ici {
+  font-family: 'iCiel Finch', cursive, serif !important;
+  font-style: normal;
+  font-variant-ligatures: common-ligatures contextual swashes !important;
+  font-feature-settings: "liga" 1, "swsh" 1, "calt" 1 !important;
+}
+
+

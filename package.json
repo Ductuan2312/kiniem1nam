@@ -1,0 +1,20 @@
+{
+  "name": "ky-niem-tinh-yeu-1-nam",
+  "version": "1.0.0",
+  "description": "Trang Hero kỷ niệm tình yêu 1 năm phong cách Cinematic, tối giản, sang trọng.",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "anniversary",
+    "cinematic",
+    "hero-section",
+    "love"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}

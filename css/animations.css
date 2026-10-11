@@ -1,0 +1,91 @@
+/* ==========================================
+   III. ANIMATION KEYFRAMES & MOTION STATES
+   ========================================== */
+
+/* 1. Hiệu ứng phóng nhẹ ảnh nền khi mới tải trang */
+@keyframes heroImageIn {
+  from {
+    opacity: 0;
+    transform: scale(1.18);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-image-animate {
+  opacity: 0;
+  animation: heroImageIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.15s;
+}
+
+/* 2. Hiệu ứng trồi từng từ cho tiêu đề */
+@keyframes wordPullUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pull-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.pull-word:not(:last-child) {
+  margin-right: 0.3em;
+}
+
+.words-visible .pull-word {
+  animation: wordPullUp 0.55s ease forwards;
+}
+
+/* 3. Hiệu ứng làm mờ và trồi lên cho nội dung/thẻ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.fade-up-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  filter: blur(8px);
+}
+
+.fade-up-reveal.is-visible {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+/* 4. Sóng âm thanh cho nút phát nhạc nền */
+@keyframes soundWave {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 16px;
+  }
+}
+
+/* 5. Tự động tắt chuyển động khi người dùng cài đặt reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}

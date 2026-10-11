@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Our Story // 1-Year Anniversary</title>
+  <meta name="description" content="Trang web kỷ niệm tình yêu 1 năm - Our Story // You & Me Still Us.">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Heading Font: Orbitron-Medium -->
+  <link href="https://db.onlinewebfonts.com/c/b1314443e183d1cdd77049077c46facc?family=Orbitron-Medium" rel="stylesheet">
+
+  <!-- Stylesheet tổng hợp module -->
+  <link rel="stylesheet" href="./css/style.css?t=3">
+</head>
+<body>
+
+  <!-- Audio Player (Tự động phát khi tương tác, file đặt tại assets/audio/bg-music.mp3) -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="./assets/audio/bg-music.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <!-- ==========================================
+       1. HERO SECTION (CINEMATIC SPOTLIGHT)
+       ========================================== -->
+  <main class="hero">
+    <!-- Image Layers -->
+    <div class="hero-base-img hero-image-animate"></div>
+    <div class="hero-reveal-img" id="reveal-img"></div>
+    
+    <!-- UI Overlay Layer -->
+    <div class="hero-ui">
+      <!-- Khối bên trái -->
+      <div class="hero-left">
+        <div class="hero-copy">
+          <h1 class="words-pull-up font-artistic" data-split="false">
+            <span class="pull-line">Our Story //</span>
+            <span class="pull-line">You & Me</span>
+            <span class="pull-line">Still Us.</span>
+          </h1>
+          <p class="fade-up-reveal hero-quote font-finch" data-delay="0.5">Tình yêu đơn giản là cùng nhau đồng hành, sự hiện diện của đối phương cũng đủ xoa dịu trái tim này &lt;3</p>
+        </div>
+      </div>
+
+      <!-- Khối chữ nghệ thuật bên phải: Đức Tuân & Kim Huyền -->
+      <div class="hero-right">
+        <div class="hero-calligraphy-frame fade-up-reveal" data-delay="0.6">
+          <img src="assets/images/Head.png?t=1" alt="Đức Tuân Và Kim Huyền" class="hero-calligraphy-img" />
+        </div>
+      </div>
+
+      <!-- Góc trên phải: Năm kỷ niệm EST. 2025 & Nút nhạc nền ngay bên dưới -->
+      <div class="hero-top-right fade-up-reveal" data-delay="0.75">
+        <div class="hero-page">EST. 2025</div>
+        <button id="music-toggle-btn" class="music-toggle-btn music-paused" aria-label="Bật nhạc nền">
+          <div class="sound-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span id="music-btn-text">MUSIC OFF</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Lớp chuyển tiếp hòa quyện mờ mờ ảo ảo sang nền #e6ddd5 -->
+    <div class="hero-bottom-fade" aria-hidden="true"></div>
+
+    <!-- Nút chỉ dẫn cuộn xuống -->
+    <button id="scroll-down-btn" class="scroll-indicator" aria-label="Cuộn xuống xem tiếp">
+      <div class="scroll-mouse" aria-hidden="true"></div>
+      <span>HÀNH TRÌNH TÌNH YÊU</span>
+    </button>
+  </main>
+
+  <!-- ==========================================
+       2. LOVE COUNTER SECTION (BỘ ĐẾM THỜI GIAN)
+       ========================================== -->
+  <section id="counter-section" class="content-section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag fade-up-reveal">Our Timeless Journey</span>
+        <h2 class="section-title font-mat fade-up-reveal">Thời gian chúng ta bên nhau</h2>
+        <p class="section-desc font-ici fade-up-reveal">Thời gian có thể trôi qua không ngừng nghỉ, nhưng từng giây phút được cùng em bước đi đều là những ký ức tuyệt vời nhất.</p>
+      </div>
+
+      <!-- Bốn ô số đếm thời gian (Được cập nhật tự động mỗi giây) -->
+      <div id="love-counter" class="counter-grid fade-up-reveal" data-start-date="2025-10-06T00:00:00">
+        <div class="counter-card">
+          <div class="counter-num" id="count-days">365</div>
+          <div class="counter-lbl">NGÀY BÊN NHAU</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-num" id="count-hours">00</div>
+          <div class="counter-lbl">GIỜ YÊU THƯƠNG</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-num" id="count-minutes">00</div>
+          <div class="counter-lbl">PHÚT ĐONG ĐẦY</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-num" id="count-seconds">00</div>
+          <div class="counter-lbl">GIÂY HẠNH PHÚC</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. LOVE TIMELINE SECTION (DÒNG THỜI GIAN)
+       ========================================== -->
+  <section id="timeline-section" class="content-section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag fade-up-reveal">Milestones Archive</span>
+        <h2 class="section-title font-mat fade-up-reveal">Dòng Thời Gian kỉ Niệm</h2>
+        <p class="section-desc font-ici fade-up-reveal">4 cột mốc đáng nhớ nhất của 2 chúng mình</p>
+      </div>
+
+      <div class="timeline-stream">
+        <!-- Chapter 01 -->
+        <div class="timeline-row fade-up-reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-box">
+            <span class="timeline-chapter">Ngày 26 tháng 8 năm 2025</span>
+            <h3 class="timeline-heading">Sự khởi đầu của 1 điều kì diệu mới</h3>
+            <p class="timeline-text">Không ai trên đời gặp nhau là ngẫu nhiên cả, chúng ta có duyên giữa bao nhiêu người mới có thể gặp nhau được, đây cũng là khởi nguồn của một tình yêu mang tên anh Bột và em Mít</p>
+          </div>
+        </div>
+
+        <!-- Chapter 02 -->
+        <div class="timeline-row fade-up-reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-box">
+            <span class="timeline-chapter">Ngày 06 tháng 10 năm 2025</span>
+            <h3 class="timeline-heading">Ngày mà tình yêu bắt đầu</h3>
+            <p class="timeline-text">Có lẽ cũng không ai ngờ rằng chúng ta lại trở thành một đôi, nơi 2 con người tìm thấy được điều gì đó từ chính con người trước mắt mình, là cột mốc đáng nhớ hằng năm cũng là ngày quan trọng của cả 2 đánh dấu cho 1 mối quan hệ mới</p>
+          </div>
+        </div>
+
+        <!-- Chapter 03 -->
+        <div class="timeline-row fade-up-reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-box">
+            <span class="timeline-chapter">23/02/2005</span>
+            <h3 class="timeline-heading">Ngày sinh của em yêu nè</h3>
+            <p class="timeline-text">Có lẽ đây cũng là 1 ngày quan trọng không kém vì nó đánh dấu ngày cô người yêu đến với thế giới này, một ngày bình thường của mọi người nhưng lại là ngày thật đáng yêu với anh</p>
+          </div>
+        </div>
+
+        <!-- Chapter 04 -->
+        <div class="timeline-row fade-up-reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-box">
+            <span class="timeline-chapter">23/12/2003</span>
+            <h3 class="timeline-heading">Ngày sinh của anh Bột</h3>
+            <p class="timeline-text">Ngày sinh này của anh Bột nha, quan trọng lắm đấy vì nó mang đến một người có 1 0 2 đến với thế giới này đó</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. PHOTO GALLERY SECTION (BỘ SƯU TẬP ẢNH)
+       ========================================== -->
+  <section id="gallery-section" class="content-section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag fade-up-reveal">Visual Memories</span>
+        <h2 class="section-title font-mat fade-up-reveal">những khung ảnh kỉ niệm khó quên</h2>
+        <p class="section-desc font-ici fade-up-reveal">thời gian trôi đi kỉ niệm sẽ luôn ở lại, nhờ những tấm ảnh mà mỗi khi nhìn lại ta đều mỉm cười</p>
+      </div>
+
+      <!-- Marquee Gallery: 2 hàng ngược chiều -->
+      <div class="marquee-gallery-wrapper fade-up-reveal">
+        <!-- Hàng 1: Chạy trái sang phải -->
+        <div class="marquee-track-outer">
+          <div class="marquee-track marquee-ltr" id="marquee-row1">
+            <div class="marquee-inner">
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0701.webp"><img src="./assets/images/boanh/IMG_0701.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0947.webp"><img src="./assets/images/boanh/IMG_0947.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_1057.webp"><img src="./assets/images/boanh/IMG_1057.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_1065.webp"><img src="./assets/images/boanh/IMG_1065.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0732.webp"><img src="./assets/images/boanh/IMG_0732.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/avae1.webp"><img src="./assets/images/boanh/avae1.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/avae2.webp"><img src="./assets/images/boanh/avae2.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_6464.webp"><img src="./assets/images/boanh/IMG_6464.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0355.webp"><img src="./assets/images/boanh/IMG_0355.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0356.webp"><img src="./assets/images/boanh/IMG_0356.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <!-- Duplicate for seamless loop -->
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0701.webp"><img src="./assets/images/boanh/IMG_0701.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0947.webp"><img src="./assets/images/boanh/IMG_0947.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_1057.webp"><img src="./assets/images/boanh/IMG_1057.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_1065.webp"><img src="./assets/images/boanh/IMG_1065.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0732.webp"><img src="./assets/images/boanh/IMG_0732.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/avae1.webp"><img src="./assets/images/boanh/avae1.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/avae2.webp"><img src="./assets/images/boanh/avae2.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_6464.webp"><img src="./assets/images/boanh/IMG_6464.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0355.webp"><img src="./assets/images/boanh/IMG_0355.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0356.webp"><img src="./assets/images/boanh/IMG_0356.webp" alt="Kỷ niệm" loading="lazy"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hàng 2: Chạy phải sang trái (ngược lại) -->
+        <div class="marquee-track-outer">
+          <div class="marquee-track marquee-rtl" id="marquee-row2">
+            <div class="marquee-inner">
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0223.webp"><img src="./assets/images/boanh/IMG_0223.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0850.webp"><img src="./assets/images/boanh/IMG_0850.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_6385.webp"><img src="./assets/images/boanh/IMG_6385.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_7026.webp"><img src="./assets/images/boanh/IMG_7026.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_7043.webp"><img src="./assets/images/boanh/IMG_7043.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/retouch_2025102100451284.webp"><img src="./assets/images/boanh/retouch_2025102100451284.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/retouch_2025121221535327.webp"><img src="./assets/images/boanh/retouch_2025121221535327.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/retouch_2025122500242670.webp"><img src="./assets/images/boanh/retouch_2025122500242670.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/CHUNGTACUATUONGLAI.webp"><img src="./assets/images/boanh/CHUNGTACUATUONGLAI.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/nắm tay.webp"><img src="./assets/images/boanh/nắm tay.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <!-- Duplicate for seamless loop -->
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0223.webp"><img src="./assets/images/boanh/IMG_0223.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_0850.webp"><img src="./assets/images/boanh/IMG_0850.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_6385.webp"><img src="./assets/images/boanh/IMG_6385.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_7026.webp"><img src="./assets/images/boanh/IMG_7026.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/IMG_7043.webp"><img src="./assets/images/boanh/IMG_7043.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/retouch_2025102100451284.webp"><img src="./assets/images/boanh/retouch_2025102100451284.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/retouch_2025121221535327.webp"><img src="./assets/images/boanh/retouch_2025121221535327.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/retouch_2025122500242670.webp"><img src="./assets/images/boanh/retouch_2025122500242670.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/CHUNGTACUATUONGLAI.webp"><img src="./assets/images/boanh/CHUNGTACUATUONGLAI.webp" alt="Kỷ niệm" loading="lazy"></div>
+              <div class="mgallery-item" data-src="./assets/images/boanh/nắm tay.webp"><img src="./assets/images/boanh/nắm tay.webp" alt="Kỷ niệm" loading="lazy"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hover Zoom Overlay -->
+        <div id="mgallery-zoom" class="mgallery-zoom-overlay" aria-hidden="true">
+          <div class="mgallery-zoom-backdrop"></div>
+          <img id="mgallery-zoom-img" src="" alt="Ảnh kỷ niệm" class="mgallery-zoom-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. LOVE LETTER SECTION (BỨC THƯ TÌNH GỬI EM)
+       ========================================== -->
+  <section id="letter-section" class="content-section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag fade-up-reveal">From My Heart</span>
+        <h2 class="section-title font-mat fade-up-reveal">Bức Thư Gửi Em</h2>
+        <p class="section-desc font-ici fade-up-reveal">Một chút tâm sự chân thành anh muốn gửi gắm riêng tới em nhân ngày đặc biệt này.</p>
+      </div>
+
+      <div class="letter-wrapper fade-up-reveal">
+        <div class="envelope-card" id="love-letter-card">
+          <div class="wax-seal" aria-hidden="true">💌</div>
+          
+          <div class="envelope-prompt">
+            <h3>Bức Thư Niêm Phong Tình Yêu</h3>
+            <p>Dành riêng cho cô gái đã thắp sáng cả thế giới của anh trong suốt một năm qua.</p>
+            <button id="open-letter-btn" class="btn-open-letter">MỞ BỨC THƯ TÌNH</button>
+          </div>
+
+          <!-- Nội dung bức thư (Có thể dễ dàng chỉnh sửa văn bản bên dưới) -->
+          <div class="letter-paper">
+            <div class="letter-body">
+Gửi em, cô gái tuyệt vời nhất của anh,
+
+đã 1 năm trôi qua kể từ ngày hai chúng mình chính thức gọi nhau bằng hai tiếng "người thương". Nhìn lại một năm qua, anh cảm thấy bản thân mình thật may mắn khi có em đồng hành, trải qua bao nhiều điều không hề dễ dàng, chúc cho em và anh luôn tiến về phía trước, học hỏi và trở thành phiên bản tốt nhất của chính mình.
+
+Cảm ơn em vì những ngày cùng anh cười rạng rỡ, và cả những lúc kiên nhẫn nắm tay anh vượt qua bao âu lo. Cảm ơn vì những cử chỉ quan tâm dịu dàng, những bữa ăn ấm áp, và cả những cái ôm xua tan hết mọi mệt nhoài sau một ngày dài.
+
+Người ta thường nói tình yêu theo thời gian sẽ vơi bớt cuồng nhiệt, nhưng với anh, mỗi ngày thức dậy được yêu em lại là một ngày anh tìm thấy thêm lý do để trân trọng em nhiều hơn.
+
+Chúc mừng kỷ niệm 1 năm của chúng mình! Cảm ơn em vì đã đến và trở thành một phần không thể thiếu trong cuộc đời anh.
+            </div>
+
+            <div class="letter-footer">
+              <span class="letter-sign">MÃI YÊU EM • STILL US // 2025</span>
+              <button id="close-letter-btn" class="btn-close-letter">Gấp Thư Lại</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. SITE FOOTER & FOREVER PROMISE
+       ========================================== -->
+  <footer id="footer-section" class="site-footer">
+    <div class="section-inner">
+      <!-- Nút thả tim bay tương tác -->
+      <div class="heart-button-wrapper fade-up-reveal">
+        <button id="send-heart-btn" class="btn-heart-pulse">
+          <span>Gửi triệu trái tim cho em</span> ❤️ (<span id="heart-count">365</span>)
+        </button>
+      </div>
+
+      <p class="footer-quote fade-up-reveal">OUR STORY // YOU & ME • STILL US</p>
+      <p class="footer-sub fade-up-reveal">Made with all my heart for You • Happy 1st Anniversary</p>
+
+      <button id="back-to-top-btn" class="btn-back-to-top" aria-label="Cuộn lên đầu trang">
+        ↑ Trở Về Đầu Trang
+      </button>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       7. LIGHTBOX MODAL (XEM ẢNH CẬN CẢNH)
+       ========================================== -->
+  <div id="photo-lightbox" class="lightbox-modal" aria-hidden="true" role="dialog">
+    <button id="lightbox-close" class="lightbox-close-btn" aria-label="Đóng ảnh">&times;</button>
+    <div class="lightbox-box">
+      <img id="lightbox-img" src="" alt="Kỷ niệm tình yêu">
+      <p id="lightbox-caption" class="lightbox-caption-text"></p>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle (Chạy mượt mà cả trên localhost, Vercel và khi mở file trực tiếp) -->
+  <script src="./js/bundle.js"></script>
+</body>
+</html>

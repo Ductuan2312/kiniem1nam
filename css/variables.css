@@ -1,0 +1,39 @@
+/* ==========================================
+   I. SYSTEM VARIABLES & THEME TOKENS
+   ==========================================
+   Nơi bạn dễ dàng thay đổi bảng màu và phông chữ toàn trang.
+   ========================================== */
+
+:root {
+  /* --- CINEMATIC HERO PALETTE --- */
+  --cream: #F4EBD9;
+  --muted: rgba(244, 235, 217, 0.72);
+  --label: rgba(244, 235, 217, 0.48);
+  --orange: #C88A44;
+  --card: rgba(20, 16, 14, 0.68);
+  --bg-dark: #14100E;
+
+  /* --- WARM LINEN LOWER THEME (#e6ddd5) --- */
+  --bg-lower: #e6ddd5;
+  --bg-lower-footer: #ded4cb;
+  --text-dark: #2B201A;
+  --text-muted-dark: #6D5B50;
+  --text-label-dark: #968375;
+  --amber-dark: #A86A2E;
+  --card-light: rgba(255, 255, 255, 0.75);
+  --card-light-hover: rgba(255, 255, 255, 0.92);
+  --card-border-light: rgba(168, 106, 46, 0.16);
+  --card-shadow-light: 0 16px 36px rgba(60, 42, 32, 0.07);
+
+  /* --- TYPOGRAPHY SETTINGS ---
+     Bạn có thể đổi giữa --font-matterdi và --font-finch cực kỳ nhanh */
+  --font-heading: 'Matterdi', 'iCiel Finch', serif;
+  --font-matterdi: 'Matterdi', 'iCiel Finch', serif;
+  --font-finch: 'iCiel Finch', 'Matterdi', serif;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* --- KÍCH THƯỚC SPOTLIGHT --- */
+  --spotlight-radius-mobile: 120px;
+  --spotlight-radius-tablet: 160px;
+  --spotlight-radius-desktop: 260px;
+}
